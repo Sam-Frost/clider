@@ -33,7 +33,7 @@ Clider uses the standrd flask folder structures.
 7. *requirements.txt* : This files enlists the libraries required for the flask application to run
 8. *README.md* : This is the file that you are reading right now
 
-** static : **
+**static :**
 1. Certificate : This folder contains three files
     -Certificate.png : The certficate.png that users download
     -Clider Certificate Template.jpg : The template file on which the name and other deatils are printed to genereate final certificate
@@ -48,7 +48,7 @@ Database consists of one base table called user which always exists. It contains
 the user table is updated with his/her details and a new table is created to store the list of courses. Whenever the user creates a new
 course a new table is created to store the lectures, there links and there status.
 
-###### Future ImprovementsT
+###### Future Improvements
 - Add functionality to delete Users
 - Add functionality to delete Courses
 - Add functionality to delete Videos from particular courses

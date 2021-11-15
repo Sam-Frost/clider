@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Courses
+{% endblock %}
+
+
+
+{% block main %}
+    <link rel="stylesheet" type="text/css" href="static/mycourses.css">
+
+    <br>
+    <br>
+    <div class = "container">
+
+        <table class="table table-dark table-hover">
+
+            <thead>
+                <th>S No.</th>
+                <th>Course Name</th>
+                <th>No. of Lectures</th>
+                <th>Status</th>
+                <th>Link</th>
+            </thead>
+
+            <tbody>
+            {% for rows in course_list %}
+
+                <!--<tbody>-->
+                <tr>
+                    {% for key, value in rows.items() %}
+
+                        {% if key == "coursename1" %}
+                            <td> <form method= "get" action="/course_status"> <input type="hidden" name="coursename" value= "{{ value }}" /> <button> Go To Course </button> </form> </td>
+                        {% else %}
+                            <td> {{value}} </td>
+                        {% endif %}
+
+                    {% endfor %}
+                </tr>
+                <!--</tbody>-->
+
+            {% endfor %}
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+{% endblock %}

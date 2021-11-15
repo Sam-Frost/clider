@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Create Courses
+{% endblock %}
+
+{% block main %}
+
+    <link rel="stylesheet" href="static/createcourse_style.css">
+
+        <div class="vertical-container">
+
+        <div class="container">
+
+        <div class = "parent">
+
+            <h2>{{course_name}}</h2>
+
+            <br>
+            <br>
+
+            <div>
+                <form action="/createcourse" method="post">
+
+                    <div class="outer-container">
+
+                        {% for item in no_of_lectures %}
+
+                        <div class = "inner-container">
+
+                            {% set name = '' %}
+                            {% set name = item + ".name" %}
+                            <label for="name" >{{item}}. Enter Video Name : </label>
+                            <input  required autocomplete="off"  id="name"  name = {{name}} type="text">
+
+                            {% set url = '' %}
+                            {% set url = item + ".url" %}
+                            <label for="url">Enter Video Link : </label>
+                            <input  required autocomplete="off"  id="url" name = {{url}} type="text">
+
+                        </div>
+
+                        <br>
+                        <br>
+
+                        {% endfor %}
+
+                        <div class="button-container">
+                            <input  class="btn btn-primary" type="submit">
+                        </div>
+
+
+                    </div>
+
+
+
+                </form>
+            </div>
+
+        </div>
+        </div>
+
+    </div>
+
+{% endblock %}

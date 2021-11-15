@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Guide
+{% endblock %}
+
+{% block main %}
+
+    <link rel="stylesheet" href="static/about.css">
+
+    <div class="main_body">
+
+        <div class="element question" >
+
+            <h4 class = "q" >Q. What is Clider ?</h4>
+            <p>Ans : Clider is a web application built as final project from Harvard's Introdcutory Course <a href="https://cs50.harvard.edu/x/2021/" class="links">CS50</a>.</p>
+
+        </div>
+
+        <div class="element question" >
+
+            <h4  class = "q" >Q. What does Clider do ?</h4>
+            <p>Ans : Clider is a course builder. You can select any number lectures from <a href="https://www.youtube.com/" class="links">YouTube</a>  and group them together into a course. Then you can
+            track you progress using clider and upon completion of the course clider generates a certificates stating name of the person who
+            completed the course, stating hours of lectures attended!</p>
+
+        </div>
+
+        <div class="element" >
+
+        <h4>Technologies On Which Clider is built : </h4>
+        <ul>
+            <li>
+                <h6><a href="https://www.w3schools.com/html/" class="links">HTML5</a></h6>
+                <p>Clider is built on HTML and CSS but there is almost no use of javascript.</p>
+            </li>
+            <li>
+                <h6><a href="https://www.python.org/" class="links">Python</a></h6>
+                <p>Clider backend is powered by python. It is running on the Flask micro web framework.</p>
+            </li>
+            <li>
+                <h6><a href="https://www.sqlite.org/index.html" class="links">SQLite</a></h6>
+                <p>SQLIte3 is the choice of database for storing data regarding user login credentials, users coruses, their progress and
+                their certificates.</p>
+            </li>
+            <li>
+                <h6><a href="https://getbootstrap.com/" class="links">Bootstrap</a></h6>
+                <p>Alot of components of this web application are built on top of template structures from bootstrap such as the navbars.</p>
+            </li>
+        </ul>
+
+        </div>
+
+        <h4>
+            Special Thanks To Sir David J. Malan and CS50 team for making this possible!
+        </h4>
+
+    </div>
+
+    <footer class="footer">
+    Submission for CS50 Final Project By Samarth Negi
+    </footer>
+
+
+
+{% endblock %}

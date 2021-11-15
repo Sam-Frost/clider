@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ coursename }}
+{% endblock %}
+
+{% block main %}
+    <link rel="stylesheet" type="text/css" href="static/updatecourse_style.css">
+
+    <div class = "out-vertical-container">
+    <div class = "out-horizontal-container">
+
+            <form action="/update_course" method="post">
+
+                <div class="vertical-container">
+
+                {% for rows in lectures %}
+                        <div class = "container">
+                            <p> {{ rows['name'] }} </p>
+
+                            {% if rows['status']  == "Not Finished" %}
+
+                                <div>
+                                    <label for="radio">Completed</label>
+                                    <input type="radio" id="radio" name= "{{ rows['name'] }}" value="1">
+                                </div>
+
+                                <div>
+                                <label for="radio">Not Completed</label>
+                                <input type="radio" id="radio" name= "{{ rows['name'] }}" value="0" checked>
+                                </div>
+
+                            {% elif rows['status']  == "Finished" %}
+
+                                <div>
+                                    <label for="radio">Completed</label>
+                                    <input type="radio" id="radio" name= "{{ rows['name'] }}" value="1" checked>
+                                </div>
+
+                                <div>
+                                    <label for="radio">Not Completed</label>
+                                    <input type="radio" id="radio" name= "{{ rows['name'] }}" value="0">
+                                </div>
+
+                            {% endif %}
+                        </div>
+                {% endfor %}
+
+                <button class = "btn btn-primary mb-2"> Submit</button>
+
+                </div>
+            </form>
+    </div>
+    </div>
+
+{% endblock %}

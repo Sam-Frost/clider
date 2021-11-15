@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ coursename }}
+{% endblock %}
+
+{% block main %}
+    <link rel="stylesheet" type="text/css" href="static/coursestatus_style.css">
+
+    <div class = "container">
+
+            <table class="table table-dark table-hover">
+
+                <thead>
+                    <th>S No.</th>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Status</th>
+                </thead>
+
+                 <tbody>
+                    {% for rows in lectures %}
+                        <tr>
+                            {% for key, value in rows.items() %}
+
+                                {% if key == "link" %}
+                                    <td> <a href = {{ value }} > Watch Lecture </a> </td>
+                                {% else %}
+                                    <td> {{value}} </td>
+                                {% endif %}
+
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+
+            <a id="button" href="/update_course">Update</a>
+
+    </div>
+
+
+{% endblock %}

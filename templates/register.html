@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+
+    <link rel="stylesheet" href="static/register_style.css">
+
+    <div class="card text-center w-25 p-3 mx-auto " style="width: 5rem;">
+      <h3 class="card-header">Registration</h3>
+      <div class="card-body">
+           <form action="/register" method="post">
+                <div class="form-group">
+                    <input required autocomplete="off" id="username" autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+                    <hr>
+                </div>
+                <div class="form-group">
+                    <input required autocomplete="off" id="passwrd" class="form-control" name="password" placeholder="Password" type="password">
+                    <hr>
+                </div>
+                <div class="form-group">
+                    <input required autocomplete="off" id="confirmation" class="form-control" name="confirmation" placeholder="Confirm Password" type="password">
+                    <hr>
+                </div>
+                <button class="btn btn-primary" type="submit">Register User</button>
+            </form>
+      </div>
+    </div>
+
+
+{% endblock %}

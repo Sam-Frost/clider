@@ -1,0 +1,49 @@
+h2 {
+    text-align: center;
+    background: #D5ECDD;
+    padding : 15px;
+    color:#345B63;
+}
+
+.parent {
+    height: 80vh;
+    width: 100vh;
+    /*background: red;*/
+}
+
+.vertical-container {
+    /*background: green;*/
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 50%;
+    /*background: red;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-container {
+    height: 50%;
+    color : white;
+    padding : 15px;
+    background: #0b282e;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
